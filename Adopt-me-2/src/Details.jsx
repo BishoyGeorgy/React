@@ -19,7 +19,7 @@ const Details = () => {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function requestPets() {
-    const res = await fetch(`http://pets-v2.dev-apis.com/pets?id=${id}`);
+    const res = await fetch(`https://pets-v2.dev-apis.com/pets?id=${id}`);
     const json = await res.json();
     setPet(json.pets[0]);
     // setPet(json.numberOfResults > 0 ? json.pets[0] : new Object); // to handle empty responses from the API
@@ -30,7 +30,7 @@ const Details = () => {
   //   setShowModal(!showModal);
   // }
   function adopt() {
-    window.location = "http://bit.ly/pet-adopt";
+    window.location = "https://bit.ly/pet-adopt";
   }
 
   console.log(showModal);

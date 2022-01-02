@@ -9,7 +9,7 @@ const Pet = (props) => {
     // console.log(image);
   });
 
-  images.forEach(item => console.log(item));
+  // images.forEach(item => console.log(item));
 
   if (images.length) {
     hero = images[0];

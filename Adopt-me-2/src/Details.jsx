@@ -26,14 +26,17 @@ const Details = () => {
     setLoading(false);
   }
 
-  // function toggleModal() {
-  //   setShowModal(!showModal);
-  // }
   function adopt() {
     window.location = "https://bit.ly/pet-adopt";
   }
 
-  console.log(showModal);
+  if (images) {
+    images.forEach((image, index) => {
+      images[index] = image.replace("http://", "https://");
+    });
+    console.log(images);
+  }
+
   return (
     <div className="details">
       {loading ? (

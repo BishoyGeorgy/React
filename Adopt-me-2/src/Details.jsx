@@ -21,8 +21,8 @@ const Details = () => {
   async function requestPets() {
     const res = await fetch(`https://pets-v2.dev-apis.com/pets?id=${id}`);
     const json = await res.json();
-    setPet(json.pets[0]);
-    // setPet(json.numberOfResults > 0 ? json.pets[0] : new Object); // to handle empty responses from the API
+    // setPet(json.pets[0]);
+    setPet(json.numberOfResults > 0 ? json.pets[0] : new Object); // to handle empty responses from the API
     setLoading(false);
   }
 
